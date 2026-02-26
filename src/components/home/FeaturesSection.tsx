@@ -87,7 +87,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="section-title text-foreground mt-4"
           >
-            The Ibn Al-Haytham Difference
+            The BENNANI OPTIC Difference
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
