@@ -350,7 +350,7 @@ const ProductDetails = () => {
                           <Plus className="w-4 h-4" />
                         </Button>
                       </div>
-                      <span className={`text-sm ${product.inStock ? "text-green-600" : "text-destructive"}`}>
+                      <span className={`text-sm ${product.inStock ? "text-primary" : "text-destructive"}`}>
                         {product.inStock ? `${product.stock} in stock` : "Out of stock"}
                       </span>
                     </div>

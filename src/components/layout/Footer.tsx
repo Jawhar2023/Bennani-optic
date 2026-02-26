@@ -13,7 +13,6 @@ const quickLinks = [
 const companyLinks = [
   { name: "À propos", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Test de vue", href: "/eye-test" },
   { name: "Avis", href: "/reviews" },
 ];
 

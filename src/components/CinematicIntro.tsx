@@ -36,7 +36,7 @@ export default function CinematicIntro({
           className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
           style={{
             background:
-              "radial-gradient(circle at center, #064e3b 0%, #022c22 60%, #000 100%)",
+              "radial-gradient(circle at center, #E2958F 0%, #9e6a66 60%, #000 100%)",
           }}
         >
           {/* CAMERA BLUR → SHARP */}
@@ -54,7 +54,8 @@ export default function CinematicIntro({
             initial={{ x: "-120%" }}
             animate={{ x: "220%" }}
             transition={{ duration: 2.5, ease: "easeInOut" }}
-            className="absolute inset-y-0 w-44 bg-green-400/20 blur-3xl"
+            className="absolute inset-y-0 w-44 blur-3xl"
+            style={{ backgroundColor: "rgba(226,149,143,0.25)" }}
           />
 
           {/* GLASSES + TEXT – centered in viewport */}
@@ -66,10 +67,11 @@ export default function CinematicIntro({
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.8, duration: 1 }}
-                className="absolute w-[90px] h-[90px] rounded-full border-2 border-green-400"
+                className="absolute w-[90px] h-[90px] rounded-full border-2"
                 style={{
+                  borderColor: "#E2958F",
                   backdropFilter: "blur(8px) brightness(1.2)",
-                  boxShadow: "0 0 25px rgba(34,197,94,0.6)",
+                  boxShadow: "0 0 25px rgba(226,149,143,0.6)",
                 }}
               />
 
@@ -78,10 +80,11 @@ export default function CinematicIntro({
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.8, duration: 1 }}
-                className="absolute w-[90px] h-[90px] rounded-full border-2 border-green-400 translate-x-[120px]"
+                className="absolute w-[90px] h-[90px] rounded-full border-2 translate-x-[120px]"
                 style={{
+                  borderColor: "#E2958F",
                   backdropFilter: "blur(8px) brightness(1.2)",
-                  boxShadow: "0 0 25px rgba(34,197,94,0.6)",
+                  boxShadow: "0 0 25px rgba(226,149,143,0.6)",
                 }}
               />
 
@@ -90,7 +93,8 @@ export default function CinematicIntro({
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.1, duration: 0.6 }}
-                className="absolute w-[40px] h-[2px] bg-green-400"
+                className="absolute w-[40px] h-[2px]"
+                style={{ backgroundColor: "#E2958F" }}
               />
             </div>
 
@@ -103,9 +107,10 @@ export default function CinematicIntro({
                 y: 0,
               }}
               transition={{ delay: 2.2, duration: 0.9 }}
-              className="text-5xl md:text-7xl font-semibold text-green-400 tracking-[0.3em]"
+              className="text-5xl md:text-7xl font-semibold tracking-[0.3em]"
               style={{
-                textShadow: "0 0 30px rgba(34,197,94,0.9)",
+                color: "#E2958F",
+                textShadow: "0 0 30px rgba(226,149,143,0.9)",
               }}
             >
               BENNANI OPTIC
@@ -115,7 +120,7 @@ export default function CinematicIntro({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.8 }}
-              className="mt-4 text-xs uppercase tracking-[0.6em] text-green-200/70"
+              className="mt-4 text-xs uppercase tracking-[0.6em] text-white/70"
             >
               Ariana Soghra · Opticien
             </motion.p>
@@ -127,7 +132,8 @@ export default function CinematicIntro({
             initial={{ opacity: 0 }}
             animate={{ opacity: focus ? [0, 0.5, 0] : 0 }}
             transition={{ duration: 0.8 }}
-            className="absolute inset-0 bg-green-400 blur-2xl"
+            className="absolute inset-0 blur-2xl"
+            style={{ backgroundColor: "#E2958F" }}
           />
 
           {/* SKIP */}
@@ -137,8 +143,17 @@ export default function CinematicIntro({
             animate={{ opacity: 1 }}
             transition={{ delay: 2 }}
             className="absolute bottom-10 right-10 text-xs uppercase tracking-widest
-              text-green-200/70 hover:text-green-300
-              border border-green-400/30 px-4 py-2 rounded-full"
+              border px-4 py-2 rounded-full"
+            style={{
+              color: "rgba(255,255,255,0.7)",
+              borderColor: "rgba(226,149,143,0.4)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "#E2958F";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = "rgba(255,255,255,0.7)";
+            }}
           >
             Skip →
           </motion.button>

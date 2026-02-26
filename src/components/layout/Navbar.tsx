@@ -17,7 +17,6 @@ const navLinks = [
       { name: "Accessoires", href: "/shop/accessories" },
     ]
   },
-  { name: "Test de vue", href: "/eye-test" },
   { name: "À propos", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

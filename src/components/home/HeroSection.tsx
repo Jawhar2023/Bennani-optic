@@ -3,7 +3,7 @@ import { Star, CheckCircle2, ArrowRight, Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg-recolored.jpg";
 
 const HERO_VIDEO_URL = "https://videos.pexels.com/video-files/5529578/5529578-hd_1920_1080_25fps.mp4";
 

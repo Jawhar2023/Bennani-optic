@@ -38,7 +38,7 @@ const Cart = () => {
               className="text-center max-w-3xl mx-auto"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                <ShoppingBag className="w-8 h-8 text-primary" />
+                <ShoppingBag className="w-8 h-8 text-primary shrink-0" strokeWidth={1.5} />
               </div>
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Panier</h1>
               <p className="text-muted-foreground text-lg">
@@ -53,7 +53,7 @@ const Cart = () => {
           <div className="container mx-auto px-4 lg:px-8">
             {cartItems.length === 0 ? (
               <div className="text-center py-16">
-                <ShoppingBag className="w-24 h-24 text-muted-foreground/30 mx-auto mb-6" />
+                <ShoppingBag className="w-24 h-24 text-primary/40 mx-auto mb-6 shrink-0" strokeWidth={1.5} />
                 <h2 className="text-2xl font-bold mb-4">Votre panier est vide</h2>
                 <p className="text-muted-foreground mb-6">Ajoutez des produits pour commencer vos achats</p>
                 <Button asChild size="lg">
@@ -87,7 +87,7 @@ const Cart = () => {
                                   <Button
                                     variant="outline"
                                     size="icon"
-                                    className="h-8 w-8"
+                                    className="h-8 w-8 text-foreground hover:text-primary"
                                     onClick={() => updateQuantityByChange(item.id, -1)}
                                   >
                                     <Minus className="w-4 h-4" />
@@ -96,7 +96,7 @@ const Cart = () => {
                                   <Button
                                     variant="outline"
                                     size="icon"
-                                    className="h-8 w-8"
+                                    className="h-8 w-8 text-foreground hover:text-primary"
                                     onClick={() => updateQuantityByChange(item.id, 1)}
                                   >
                                     <Plus className="w-4 h-4" />
@@ -106,9 +106,9 @@ const Cart = () => {
                                   variant="ghost"
                                   size="icon"
                                   onClick={() => removeItem(item.id)}
-                                  className="text-destructive hover:text-destructive"
+                                  className="text-destructive hover:text-destructive hover:bg-destructive/10"
                                 >
-                                  <Trash2 className="w-5 h-5" />
+                                  <Trash2 className="w-5 h-5 shrink-0" />
                                 </Button>
                               </div>
                               <p className="text-muted-foreground text-sm mt-2">
@@ -160,10 +160,10 @@ const Cart = () => {
                           </div>
                         )}
 
-                        <Button className="w-full" size="lg" asChild>
-                          <Link to="/checkout">
+                        <Button className="w-full text-primary-foreground" size="lg" asChild>
+                          <Link to="/checkout" className="text-primary-foreground">
                             Passer la commande
-                            <ArrowRight className="w-4 h-4 ml-2" />
+                            <ArrowRight className="w-4 h-4 ml-2 shrink-0" />
                           </Link>
                         </Button>
 

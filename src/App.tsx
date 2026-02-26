@@ -12,7 +12,6 @@ import Index from "./pages/Index";
 import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
 import ProductDetails from "./pages/ProductDetails";
-import EyeTest from "./pages/EyeTest";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
@@ -45,7 +44,6 @@ const App = () => {
               <Route path="/shop" element={<Shop />} />
               <Route path="/shop/:category" element={<ShopCategory />} />
               <Route path="/product/:id" element={<ProductDetails />} />
-              <Route path="/eye-test" element={<EyeTest />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />

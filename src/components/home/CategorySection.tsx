@@ -45,6 +45,15 @@ export function CategorySection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+          <motion.p
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.1 }}
+            className="font-display text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] mb-6 py-3 px-6 rounded-2xl bg-primary/90 inline-block"
+            style={{ color: "#ffffff" }}
+          >
+            BENNANI OPTIC
+          </motion.p>
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
