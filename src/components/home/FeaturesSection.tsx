@@ -79,7 +79,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.2 }}
             className="text-primary text-sm font-medium uppercase tracking-widest"
           >
-            Why Choose Us
+            Pourquoi nous choisir
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="section-title text-foreground mt-4"
           >
-            The BENNANI OPTIC Difference
+            La différence BENNANI OPTIC
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export function FeaturesSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-muted-foreground mt-4"
           >
-            Experience exceptional eye care with our commitment to quality, service, and your perfect vision
+            Bénéficiez d'un suivi visuel d'exception grâce à notre engagement en matière de qualité, de service et de confort de vision
           </motion.p>
         </motion.div>
 

@@ -40,9 +40,9 @@ const Cart = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                 <ShoppingBag className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Shopping Cart</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Panier</h1>
               <p className="text-muted-foreground text-lg">
-                Review your items and proceed to checkout
+                Vérifiez vos articles puis passez à la commande
               </p>
             </motion.div>
           </div>
@@ -54,10 +54,10 @@ const Cart = () => {
             {cartItems.length === 0 ? (
               <div className="text-center py-16">
                 <ShoppingBag className="w-24 h-24 text-muted-foreground/30 mx-auto mb-6" />
-                <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
-                <p className="text-muted-foreground mb-6">Start shopping to add items to your cart</p>
+                <h2 className="text-2xl font-bold mb-4">Votre panier est vide</h2>
+                <p className="text-muted-foreground mb-6">Ajoutez des produits pour commencer vos achats</p>
                 <Button asChild size="lg">
-                  <Link to="/shop">Browse Products</Link>
+                  <Link to="/shop">Voir les produits</Link>
                 </Button>
               </div>
             ) : (
@@ -81,7 +81,7 @@ const Cart = () => {
                             />
                             <div className="flex-1">
                               <h3 className="font-semibold text-lg mb-2">{item.name}</h3>
-                              <p className="text-primary font-bold text-xl mb-4">${item.price.toFixed(2)}</p>
+                              <p className="text-primary font-bold text-xl mb-4">TND {item.price.toFixed(2)}</p>
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-2">
                                   <Button
@@ -112,7 +112,7 @@ const Cart = () => {
                                 </Button>
                               </div>
                               <p className="text-muted-foreground text-sm mt-2">
-                                Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                                Sous-total : TND {(item.price * item.quantity).toFixed(2)}
                               </p>
                             </div>
                           </div>
@@ -131,20 +131,20 @@ const Cart = () => {
                   >
                     <Card className="sticky top-24">
                       <CardHeader>
-                        <CardTitle>Order Summary</CardTitle>
+                        <CardTitle>Récapitulatif</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Subtotal</span>
+                            <span className="text-muted-foreground">Sous-total</span>
                             <span>TND {subtotal.toFixed(2)}</span>
                           </div>
                           <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Shipping</span>
-                            <span>{shipping === 0 ? "Free" : `TND ${shipping.toFixed(2)}`}</span>
+                            <span className="text-muted-foreground">Livraison</span>
+                            <span>{shipping === 0 ? "Gratuite" : `TND ${shipping.toFixed(2)}`}</span>
                           </div>
                           <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Tax</span>
+                            <span className="text-muted-foreground">Taxe</span>
                             <span>TND {tax.toFixed(2)}</span>
                           </div>
                           <Separator />
@@ -156,19 +156,19 @@ const Cart = () => {
 
                         {subtotal < 100 && (
                           <div className="p-3 bg-primary/10 rounded-lg text-sm text-center">
-                            Add TND {(100 - subtotal).toFixed(2)} more for free shipping!
+                            Ajoutez TND {(100 - subtotal).toFixed(2)} pour bénéficier de la livraison gratuite !
                           </div>
                         )}
 
                         <Button className="w-full" size="lg" asChild>
                           <Link to="/checkout">
-                            Proceed to Checkout
+                            Passer la commande
                             <ArrowRight className="w-4 h-4 ml-2" />
                           </Link>
                         </Button>
 
                         <Button variant="outline" className="w-full" asChild>
-                          <Link to="/shop">Continue Shopping</Link>
+                          <Link to="/shop">Continuer vos achats</Link>
                         </Button>
                       </CardContent>
                     </Card>

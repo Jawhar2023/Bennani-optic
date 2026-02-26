@@ -12,20 +12,20 @@ const SHOWCASE_VIDEOS = [
   {
     id: 1,
     url: Video1,
-    title: "Premium Frames",
-    subtitle: "Crafted for perfection",
+    title: "Montures premium",
+    subtitle: "Conçues pour la perfection",
   },
   {
     id: 2,
     url: Video2,
-    title: "Style Meets Vision",
-    subtitle: "Express yourself",
+    title: "Style & Vision",
+    subtitle: "Exprimez votre personnalité",
   },
   {
     id: 3,
     url: Video3,
-    title: "Exclusive Collection",
-    subtitle: "Discover excellence",
+    title: "Collection exclusive",
+    subtitle: "Découvrez l'excellence",
   },
 ];
 
@@ -81,7 +81,7 @@ export function VideoShowcase() {
             transition={{ delay: 0.2 }}
             className="text-primary text-sm font-medium uppercase tracking-widest"
           >
-            Experience Excellence
+            Une expérience d'exception
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export function VideoShowcase() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="section-title text-primary-foreground mt-4"
           >
-            Where Vision Meets Art
+            Là où la vision rencontre l'art
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export function VideoShowcase() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-primary-foreground/70 mt-4"
           >
-            Discover our collection through immersive visual experiences
+            Découvrez notre collection à travers des expériences visuelles immersives
           </motion.p>
         </motion.div>
 
@@ -149,8 +149,8 @@ export function VideoShowcase() {
               transition={{ delay: 1 }}
               className="text-primary-foreground text-right"
             >
-              <p className="font-display text-lg font-semibold">Premium Collection</p>
-              <p className="text-sm text-primary-foreground/70">2024 New Arrivals</p>
+              <p className="font-display text-lg font-semibold">Collection premium</p>
+              <p className="text-sm text-primary-foreground/70">Nouveautés 2024</p>
             </motion.div>
           </motion.div>
 

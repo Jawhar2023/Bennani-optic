@@ -63,7 +63,7 @@ export function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
 
   const title = "Vision";
-  const subtitle = "Redefined.";
+  const subtitle = "Réinventée.";
 
   const toggleVideo = () => {
     if (videoRef.current) {
@@ -171,9 +171,9 @@ export function HeroSection() {
               animate="visible"
               className="hero-subtitle mt-6 max-w-md"
             >
-              Discover premium eyewear that matches your vision and your
-              vibe. Shop from a curated collection of glasses and sunglasses
-              that blend style with precision.
+              Découvrez des lunettes de haute qualité qui s'adaptent à votre vision
+              et à votre style. Explorez une collection soigneusement sélectionnée
+              de lunettes de vue et de soleil alliant design et précision.
             </motion.p>
 
             <motion.div
@@ -188,8 +188,8 @@ export function HeroSection() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link to="/shop">
-                  <Button className="btn-hero group">
-                    Shop New Arrival
+                    <Button className="btn-hero group">
+                    Nouveautés
                     <motion.span
                       initial={{ x: 0 }}
                       whileHover={{ x: 5 }}
@@ -207,7 +207,7 @@ export function HeroSection() {
               >
                 <Link to="/shop">
                   <Button className="btn-hero-outline">
-                    Explore Collection
+                    Voir la collection
                   </Button>
                 </Link>
               </motion.div>
@@ -221,9 +221,9 @@ export function HeroSection() {
               className="flex gap-8 mt-12"
             >
               {[
-                { value: "500+", label: "Happy Clients" },
-                { value: "50+", label: "Frame Styles" },
-                { value: "5.0", label: "Google Rating" },
+                { value: "500+", label: "Clients satisfaits" },
+                { value: "50+", label: "Styles de montures" },
+                { value: "5.0", label: "Note Google" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -270,10 +270,10 @@ export function HeroSection() {
                 transition={{ delay: 1.3, duration: 0.6 }}
                 className="font-display text-xl font-semibold text-foreground"
               >
-                Eyewear & Eye Tests,<br />Delivered to You.
+                Lunettes & examens de vue,<br />directement chez vous.
               </motion.h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Eye test & frame trial service
+                Service d'examen de vue et d'essai de montures
               </p>
 
               {/* Animated Rating */}
@@ -299,11 +299,11 @@ export function HeroSection() {
               </motion.div>
 
               <div className="mt-6 space-y-3">
-                <p className="text-sm font-medium text-foreground">What to Expect?</p>
+                <p className="text-sm font-medium text-foreground">À quoi vous attendre ?</p>
                 {[
-                  "Certified eye care professionals",
-                  "Advanced diagnostic tools",
-                  "Hassle-free at-home visits",
+                  "Professionnels de la vue certifiés",
+                  "Technologie de diagnostic avancée",
+                  "Visites à domicile sans tracas",
                 ].map((item, i) => (
                   <motion.div
                     key={item}

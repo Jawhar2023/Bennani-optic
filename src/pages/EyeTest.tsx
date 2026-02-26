@@ -14,23 +14,23 @@ const EyeTest = () => {
 
   const testQuestions = [
     {
-      question: "Which line is clearer? Line A or Line B?",
-      options: ["Line A", "Line B", "Both are equal", "Neither is clear"],
+      question: "Quelle ligne est la plus nette ? La ligne A ou la ligne B ?",
+      options: ["Ligne A", "Ligne B", "Elles sont identiques", "Aucune n'est nette"],
       type: "vision"
     },
     {
-      question: "Can you read the smallest line clearly?",
-      options: ["Yes, all lines", "Most lines", "Some lines", "None clearly"],
+      question: "Pouvez-vous lire clairement la plus petite ligne ?",
+      options: ["Oui, toutes les lignes", "La plupart des lignes", "Quelques lignes", "Aucune ligne clairement"],
       type: "vision"
     },
     {
-      question: "Do you experience eye strain when reading?",
-      options: ["Never", "Sometimes", "Often", "Always"],
+      question: "Ressentez-vous une fatigue oculaire lorsque vous lisez ?",
+      options: ["Jamais", "Parfois", "Souvent", "Toujours"],
       type: "symptom"
     },
     {
-      question: "How often do you use digital screens?",
-      options: ["Less than 2 hours/day", "2-5 hours/day", "5-8 hours/day", "More than 8 hours/day"],
+      question: "Combien de temps passez-vous chaque jour sur des écrans ?",
+      options: ["Moins de 2 heures/jour", "2 à 5 heures/jour", "5 à 8 heures/jour", "Plus de 8 heures/jour"],
       type: "lifestyle"
     }
   ];
@@ -44,7 +44,7 @@ const EyeTest = () => {
       setCurrentStep(currentStep + 1);
     } else {
       // Test completed
-      alert("Test completed! Please schedule an appointment for a comprehensive eye examination.");
+      alert("Test terminé ! Veuillez prendre rendez-vous pour un examen de vue complet en magasin.");
     }
   };
 
@@ -72,9 +72,9 @@ const EyeTest = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                 <Eye className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Online Eye Test</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Test de vue en ligne</h1>
               <p className="text-muted-foreground text-lg">
-                This is a preliminary vision screening. For accurate results, please schedule an in-person eye examination with our optometrist.
+                Il s'agit d'un dépistage visuel préliminaire. Pour des résultats fiables, veuillez effectuer un examen de vue en personne avec notre opticien.
               </p>
             </motion.div>
           </div>
@@ -86,7 +86,7 @@ const EyeTest = () => {
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
-                  <CardTitle className="text-2xl">Question {currentStep + 1} of {testQuestions.length}</CardTitle>
+                  <CardTitle className="text-2xl">Question {currentStep + 1} sur {testQuestions.length}</CardTitle>
                   <div className="flex gap-1">
                     {testQuestions.map((_, index) => (
                       <div
@@ -102,9 +102,9 @@ const EyeTest = () => {
                   </div>
                 </div>
                 <CardDescription>
-                  {testQuestions[currentStep].type === "vision" && "Please answer based on what you see clearly"}
-                  {testQuestions[currentStep].type === "symptom" && "Please answer based on your experience"}
-                  {testQuestions[currentStep].type === "lifestyle" && "Please answer based on your daily habits"}
+                  {testQuestions[currentStep].type === "vision" && "Répondez en fonction de ce que vous voyez le plus nettement"}
+                  {testQuestions[currentStep].type === "symptom" && "Répondez en fonction de ce que vous ressentez habituellement"}
+                  {testQuestions[currentStep].type === "lifestyle" && "Répondez en fonction de vos habitudes quotidiennes"}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -133,7 +133,7 @@ const EyeTest = () => {
                     disabled={currentStep === 0}
                     className="flex-1"
                   >
-                    Previous
+                    Précédent
                   </Button>
                   <Button
                     onClick={handleNext}
@@ -142,11 +142,11 @@ const EyeTest = () => {
                   >
                     {isTestComplete ? (
                       <>
-                        Complete Test <CheckCircle2 className="w-4 h-4 ml-2" />
+                        Terminer le test <CheckCircle2 className="w-4 h-4 ml-2" />
                       </>
                     ) : (
                       <>
-                        Next <ArrowRight className="w-4 h-4 ml-2" />
+                        Suivant <ArrowRight className="w-4 h-4 ml-2" />
                       </>
                     )}
                   </Button>
@@ -162,8 +162,8 @@ const EyeTest = () => {
               className="mt-8 p-4 bg-muted rounded-lg"
             >
               <p className="text-sm text-muted-foreground text-center">
-                <strong>Disclaimer:</strong> This online test is for informational purposes only and cannot replace a professional eye examination.
-                Please schedule an appointment with our optometrist for accurate diagnosis and prescription.
+                <strong>Avertissement :</strong> ce test en ligne est purement informatif et ne remplace pas un examen de vue réalisé par un professionnel.
+                Pour un diagnostic précis et une correction adaptée, veuillez prendre rendez-vous avec notre opticien.
               </p>
             </motion.div>
           </div>
@@ -172,12 +172,12 @@ const EyeTest = () => {
         {/* Schedule Appointment CTA */}
         <section className="py-16 bg-primary/5">
           <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl font-display font-bold mb-4">Need a Professional Eye Examination?</h2>
+          <h2 className="text-3xl font-display font-bold mb-4">Besoin d'un examen de vue professionnel ?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Schedule an appointment with our certified optometrist for a comprehensive eye health assessment.
+              Prenez rendez-vous avec notre équipe pour un bilan visuel complet et des conseils personnalisés.
             </p>
             <Button size="lg" asChild>
-              <a href="/contact">Schedule Appointment</a>
+              <a href="/contact">Prendre rendez-vous</a>
             </Button>
           </div>
         </section>

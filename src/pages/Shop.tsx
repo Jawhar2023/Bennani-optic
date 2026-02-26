@@ -34,11 +34,11 @@ const Shop = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const categories = [
-    { name: "All", value: null },
-    { name: "Eyeglasses", value: "eyeglasses" },
-    { name: "Sunglasses", value: "sunglasses" },
-    { name: "Contact Lenses", value: "lenses" },
-    { name: "Accessories", value: "accessories" },
+    { name: "Tous", value: null },
+    { name: "Lunettes de vue", value: "eyeglasses" },
+    { name: "Lunettes de soleil", value: "sunglasses" },
+    { name: "Lentilles de contact", value: "lenses" },
+    { name: "Accessoires", value: "accessories" },
   ];
 
   const filteredProducts = allProducts.filter((product) => {
@@ -60,9 +60,9 @@ const Shop = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Our Collection</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Notre collection</h1>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Discover premium eyewear crafted with precision and style
+                Découvrez des montures premium conçues avec précision et style
               </p>
             </motion.div>
           </div>
@@ -77,7 +77,7 @@ const Shop = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
                   <Input
                     type="text"
-                    placeholder="Search products..."
+                    placeholder="Rechercher un produit..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10"
@@ -123,7 +123,7 @@ const Shop = () => {
           <div className="container mx-auto px-4 lg:px-8">
             {filteredProducts.length === 0 ? (
               <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg">No products found matching your criteria.</p>
+                <p className="text-muted-foreground text-lg">Aucun produit ne correspond à vos critères.</p>
               </div>
             ) : (
               <div className={viewMode === "grid"

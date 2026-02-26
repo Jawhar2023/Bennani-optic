@@ -6,19 +6,19 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Accueil", href: "/" },
   {
-    name: "Shop",
+    name: "Boutique",
     href: "/shop",
     submenu: [
-      { name: "Eyeglasses", href: "/shop/eyeglasses" },
-      { name: "Sunglasses", href: "/shop/sunglasses" },
-      { name: "Contact Lenses", href: "/shop/lenses" },
-      { name: "Accessories", href: "/shop/accessories" },
+      { name: "Lunettes de vue", href: "/shop/eyeglasses" },
+      { name: "Lunettes de soleil", href: "/shop/sunglasses" },
+      { name: "Lentilles de contact", href: "/shop/lenses" },
+      { name: "Accessoires", href: "/shop/accessories" },
     ]
   },
-  { name: "Eye Test", href: "/eye-test" },
-  { name: "About Us", href: "/about" },
+  { name: "Test de vue", href: "/eye-test" },
+  { name: "À propos", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 

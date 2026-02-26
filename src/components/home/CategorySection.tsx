@@ -2,21 +2,22 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import menCategory from "@/assets/men-category.jpg";
 import womenCategory from "@/assets/women-category.jpg";
 
 const categories = [
   {
     id: 1,
-    name: "For Men",
-    description: "Bold frames for the modern gentleman",
+    name: "Homme",
+    description: "Montures affirmées pour l'homme moderne",
     image: menCategory,
     href: "/shop/men",
   },
   {
     id: 2,
-    name: "For Women",
-    description: "Elegant styles that make a statement",
+    name: "Femme",
+    description: "Styles élégants qui attirent le regard",
     image: womenCategory,
     href: "/shop/women",
   },
@@ -50,7 +51,7 @@ export function CategorySection() {
             transition={{ delay: 0.2 }}
             className="text-primary text-sm font-medium uppercase tracking-widest"
           >
-            Shop by Category
+            Acheter par catégorie
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +59,7 @@ export function CategorySection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="section-title text-foreground mt-4"
           >
-            Find Your Perfect Style
+            Trouvez votre style parfait
           </motion.h2>
         </motion.div>
 
@@ -117,18 +118,19 @@ export function CategorySection() {
                   whileTap={{ scale: 0.95 }}
                   className="mt-6"
                 >
-                  <Button 
-                    variant="outline" 
-                    className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground group/btn gap-2"
-                  >
-                    Shop Now
-                    <motion.span
-                      className="inline-block"
-                      whileHover={{ x: 5 }}
+                  <Link to={category.href}>
+                    <Button 
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 border-none group/btn gap-2 px-8"
                     >
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </motion.span>
-                  </Button>
+                      Voir la sélection
+                      <motion.span
+                        className="inline-block"
+                        whileHover={{ x: 5 }}
+                      >
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </motion.span>
+                    </Button>
+                  </Link>
                 </motion.div>
               </div>
 

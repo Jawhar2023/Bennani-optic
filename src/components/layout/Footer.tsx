@@ -4,23 +4,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const quickLinks = [
-  { name: "Eyeglasses", href: "/shop/eyeglasses" },
-  { name: "Sunglasses", href: "/shop/sunglasses" },
-  { name: "Contact Lenses", href: "/shop/lenses" },
-  { name: "Accessories", href: "/shop/accessories" },
+  { name: "Lunettes de vue", href: "/shop/eyeglasses" },
+  { name: "Lunettes de soleil", href: "/shop/sunglasses" },
+  { name: "Lentilles de contact", href: "/shop/lenses" },
+  { name: "Accessoires", href: "/shop/accessories" },
 ];
 
 const companyLinks = [
-  { name: "About Us", href: "/about" },
+  { name: "À propos", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Eye Test", href: "/eye-test" },
-  { name: "Reviews", href: "/reviews" },
+  { name: "Test de vue", href: "/eye-test" },
+  { name: "Avis", href: "/reviews" },
 ];
 
 const legalLinks = [
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms of Service", href: "/terms" },
-  { name: "Return Policy", href: "/returns" },
+  { name: "Politique de confidentialité", href: "/privacy" },
+  { name: "Conditions d'utilisation", href: "/terms" },
+  { name: "Politique de retour", href: "/returns" },
 ];
 
 export function Footer() {
@@ -64,7 +64,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Shop</h4>
+            <h4 className="font-display font-semibold text-lg mb-6">Boutique</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Company</h4>
+            <h4 className="font-display font-semibold text-lg mb-6">Entreprise</h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.name}>
@@ -129,19 +129,19 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <h4 className="font-display font-semibold text-lg">Stay Updated</h4>
+              <h4 className="font-display font-semibold text-lg">Restez informé</h4>
               <p className="text-sm text-primary-foreground/70 mt-1">
-                Subscribe for exclusive offers and new arrivals.
+                Inscrivez-vous pour recevoir nos offres et nouveautés.
               </p>
             </div>
             <div className="flex gap-2 max-w-md w-full md:w-auto">
               <Input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Entrez votre email"
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
               />
               <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Subscribe
+                S'abonner
               </Button>
             </div>
           </div>
